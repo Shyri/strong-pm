@@ -1,4 +1,4 @@
-FROM strong-pm:v5.1.0
+FROM strongloop/strong-pm:v5.1.0
 
 RUN useradd -ms /bin/bash strong-pm \
     && chown -R strong-pm:strong-pm /usr/local \
