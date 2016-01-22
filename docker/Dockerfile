@@ -1,6 +1,6 @@
 FROM node:0.12.7
 
-RUN apt-get update && apt-get install rsync
+RUN apt-get update && apt-get -y install rsync
 
 RUN useradd -ms /bin/bash strong-pm \
     && chown -R strong-pm:strong-pm /usr/local \
