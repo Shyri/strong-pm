@@ -1,8 +1,10 @@
-FROM node:0.12.7
+FROM strong-pm:v5.1.0
 
 RUN useradd -ms /bin/bash strong-pm \
     && chown -R strong-pm:strong-pm /usr/local \
     && su strong-pm -c "npm install -g strong-pm && npm cache clear"
+
+RUN apt-get update && apt-get install rsync.
 
 # Set up some semblance of an environment
 WORKDIR /home/strong-pm
